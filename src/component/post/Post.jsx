@@ -2,7 +2,7 @@ import "./post.css"
 import {Link} from 'react-router-dom'
 
 const Post = ({post}) => {
-  const pf="http://localhost:5000/images/"
+  const pf="https://blog-backend-ji2z.onrender.com/images/"
  
   return (
     <Link to={`/post/${post._id}`} className="link" >

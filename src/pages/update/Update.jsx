@@ -13,10 +13,10 @@ const Update = () => {
   const [image, setimage] = useState(null);
   const [file, setfile] = useState(null);
   const {user}=Concun()
-  const pf="http://localhost:5000/images/"
+  const pf="https://blog-backend-ji2z.onrender.com/images/"
   useEffect(() => {
     const getPost=async()=>{
-        const res=await axios.get("http://localhost:5000/api/posts/"+id)
+        const res=await axios.get("https://blog-backend-ji2z.onrender.com/api/posts/"+id)
       
         const{title,desc,photo}=res.data
         settitle(title)

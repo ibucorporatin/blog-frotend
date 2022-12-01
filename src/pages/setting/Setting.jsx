@@ -12,7 +12,7 @@ const Setting = () => {
   const [password, setpassword] = useState("");
   const [email, setemail] = useState("");
   const [file, setfile] = useState(null);
-  const pf="http://localhost:5000/images/"
+  const pf="https://blog-backend-ji2z.onrender.com/images/"
   const handleUpdate=async(e)=>{
     e.preventDefault()
     dispatch(UPDATEStart())
@@ -30,13 +30,13 @@ const Setting = () => {
       data.append("file",file)
       updatedUser.profilePic=filename;
       try {
-        await axios.post("http://localhost:5000/api/upload",data)
+        await axios.post("https://blog-backend-ji2z.onrender.com/api/upload",data)
       } catch (err) {
       }
     }
   
     try {
-    const res=  await axios.put(`http://localhost:5000/api/users/${user._id}`,updatedUser)
+    const res=  await axios.put(`https://blog-backend-ji2z.onrender.com/api/users/${user._id}`,updatedUser)
       setsuccess(true)
       dispatch(UPDATESuccess(res.data))
 

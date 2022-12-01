@@ -6,7 +6,7 @@ import { Concun } from '../../context/Context'
 
 const TobBar = () => {
   const {user,dispatch}= Concun()
-  const pf="http://localhost:5000/images/"
+  const pf="https://blog-backend-ji2z.onrender.com/images/"
   const logoutHandler=()=>{
 dispatch(LogOut())
   }
