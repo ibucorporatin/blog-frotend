@@ -12,7 +12,7 @@ const Home = () => {
 
   useEffect(()=>{
     const fetchPost= async()=>{
-    const res=await axios.get("http://localhost:5000/api/posts"+search)
+    const res=await axios.get("https://github.com/ibucorporatin/blog-frotend.git/api/posts"+search)
     setposts(res.data)
     
     }
@@ -37,7 +37,7 @@ if(posts.length===0){
         <Header/>
        <div className="home" >
        <Posts posts={posts} />
-        <SideBar className="side" />
+        <SideBar  />
        </div>
     </>
 
