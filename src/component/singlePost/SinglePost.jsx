@@ -13,7 +13,7 @@ const [post, setpost] = useState({});
 const pf="https://blog-backend-ji2z.onrender.com/images/"
 useEffect(()=>{
    const getPost=async()=>{
-    const res=await axios.get("https://blog-backend-ji2z.onrender.comapi/posts/"+id)
+    const res=await axios.get("https://blog-backend-ji2z.onrender.com/api/posts/"+id)
     setpost(res.data)
    }
    getPost()
