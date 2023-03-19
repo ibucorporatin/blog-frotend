@@ -6,7 +6,7 @@ import { Concun } from '../../context/Context'
 
 const TobBar = () => {
   const {user,dispatch}= Concun()
-  const pf="https://blog-backend-ji2z.onrender.com/images/"
+  const pf="https://clg-project.onrender.com/images/"
   const logoutHandler=()=>{
 dispatch(LogOut())
   }

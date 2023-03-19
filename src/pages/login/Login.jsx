@@ -15,7 +15,7 @@ export const Login = () => {
 e.preventDefault()
 dispatch(LoginStart())
 try {
-      const res= await axios.post("https://blog-backend-ji2z.onrender.com/api/auth/login",{
+      const res= await axios.post("https://clg-project.onrender.com/api/auth/login",{
         userName:userName.current.value,
         password:password.current.value,
       })

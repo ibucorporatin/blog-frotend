@@ -13,7 +13,7 @@ export const Register = () => {
 e.preventDefault()
 seterror(false)
 try {
-  const res=await axios.post("https://blog-backend-ji2z.onrender.com/api/auth/register",{
+  const res=await axios.post("https://clg-project.onrender.com/api/auth/register",{
     userName,email,password,profilePic:""
 
    })

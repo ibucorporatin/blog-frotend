@@ -12,7 +12,7 @@ const Home = () => {
 
   useEffect(()=>{
     const fetchPost= async()=>{
-    const res=await axios.get("https://blog-backend-ji2z.onrender.com/api/posts"+search)
+    const res=await axios.get("https://clg-project.onrender.com/api/posts"+search)
     setposts(res.data)
     
     }

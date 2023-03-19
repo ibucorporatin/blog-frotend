@@ -8,10 +8,10 @@ import "./sideBar.css"
 const SideBar = () => {
     const [cats, setcats] = useState([]);
     const {user}=Concun()
-    const pf="https://blog-backend-ji2z.onrender.com/images/"
+    const pf="https://clg-project.onrender.com/images/"
     useEffect(() => {
       const getCat=async()=>{
-        const res=await axios.get("https://blog-backend-ji2z.onrender.com/api/categories/")
+        const res=await axios.get("https://clg-project.onrender.com/api/categories/")
         setcats(res.data)
       }
       getCat()

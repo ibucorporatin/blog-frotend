@@ -13,10 +13,10 @@ const Update = () => {
   const [image, setimage] = useState(null);
   const [file, setfile] = useState(null);
   const {user}=Concun()
-  const pf="https://blog-backend-ji2z.onrender.com/images/"
+  const pf="https://clg-project.onrender.com/images/"
   useEffect(() => {
     const getPost=async()=>{
-        const res=await axios.get("https://blog-backend-ji2z.onrender.com/api/posts/"+id)
+        const res=await axios.get("https://clg-project.onrender.com/api/posts/"+id)
       
         const{title,desc,photo}=res.data
         settitle(title)
@@ -42,13 +42,13 @@ const Update = () => {
     data.append("file",file)
     newPost.photo=filename;
     try {
-      await axios.post("http://localhost:5000/api/upload",data)
+      await axios.post("https://clg-project.onrender.com/api/upload",data)
     } catch (err) {
     }
   }
 
   try {
-  const res=  await axios.put(`http://localhost:5000/api/posts/${id}`,newPost)
+  const res=  await axios.put(`https://clg-project.onrender.com/api/posts/${id}`,newPost)
        navigate(`/post/${res.data._id}`)
   } catch (error) {
     

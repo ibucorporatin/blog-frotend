@@ -10,10 +10,10 @@ const SinglePost = () => {
  const {user}=Concun()
 const id =location.pathname.split("/")[2]
 const [post, setpost] = useState({});
-const pf="https://blog-backend-ji2z.onrender.com/images/"
+const pf="https://clg-project.onrender.com/images/"
 useEffect(()=>{
    const getPost=async()=>{
-    const res=await axios.get("https://blog-backend-ji2z.onrender.com/api/posts/"+id)
+    const res=await axios.get("https://clg-project.onrender.com/api/posts/"+id)
     setpost(res.data)
    }
    getPost()
@@ -21,7 +21,7 @@ useEffect(()=>{
 
 const DeleteHandler=async()=>{
     try {
-        await axios.delete(`https://blog-backend-ji2z.onrender.com/api/posts/${post._id}`,{
+        await axios.delete(`https://clg-project.onrender.com/api/posts/${post._id}`,{
     data:{userName:user.userName}    
     })
         navigate("/")
